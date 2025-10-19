@@ -1,0 +1,164 @@
+
+body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 650px;
+      width: 95vw;
+      margin: 40px auto;
+      border: 2px dotted #222;
+      padding: 18px;
+      background: #fff;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    h2 {
+      font-size: 1.6em;
+      margin: 0 0 10px 0;
+    }
+    fieldset {
+      border: 2px solid #222;
+      padding: 12px 18px;
+      margin: 0;
+    }
+    legend {
+      padding: 0 8px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    /* form > fieldset {
+      /* margin-bottom: 20px; removed to use flex gap; */
+    /* } */
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 13px;
+    }
+    .form-label {
+      min-width: 125px;
+      font-size: 1em;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    input[type="text"],
+    input[type="tel"],
+    select {
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 6px 8px;
+      font-size: 1em;
+      border: 1.5px solid #aaa;
+      border-radius: 3px;
+    }
+    .pizza-order-flex {
+      display: flex;
+      gap: 30px;
+      margin-top: 7px;
+      flex-wrap: wrap;
+    }
+    .fieldset-box-1{
+      flex: 1 1 200px;
+      border: 2px solid #222;
+      padding: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100px;
+    }
+      .fieldset-box-2{
+      flex: 1 1 200px;
+      border: 2px solid #222;
+      padding: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .fieldset-box legend {
+      font-weight: bold;
+      font-size: 1em;
+      padding-bottom: 4px;
+    }
+    .fieldset-box label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    textarea {
+      width: 100%;
+      min-height: 64px;
+      font-size: 1em;
+      padding: 7px;
+      border: 1.5px solid #aaa;
+      border-radius: 3px;
+      margin-top: 8px;
+      resize: vertical;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 5px;
+    }
+    .button-row input[type="submit"],
+    .button-row input[type="reset"] {
+      width: 150px;
+      height: 55px;
+      font-size: 1em;
+      border: 2px solid #555;
+      background: #fff;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+    .button-row input[type="submit"]:hover,
+    .button-row input[type="reset"]:hover {
+      background: #eaeaea;
+    }
+    /* Responsive */
+    @media (max-width: 720px) {
+      .container {
+        width: 98vw;
+        padding: 12px;
+      }
+      .pizza-order-flex {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .fieldset-box {
+        flex-basis: 100%;
+      }
+    }
+    @media (max-width: 480px) {
+      .form-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .form-label {
+        min-width: auto;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="tel"],
+      select {
+        max-width: 100%;
+        width: 100%;
+      }
+      .button-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .button-row input[type="submit"],
+      .button-row input[type="reset"] {
+        width: 100%;
+        height: 48px;
+        font-size: 1em;
+      }
+    }
